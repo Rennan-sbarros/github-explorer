@@ -1,3 +1,8 @@
+$vermelho: #D0021B;
+$preto: #0B0D09;
+$amarelo: #F8E507;
+$cinza: #DDDFDF;
+
 * {
     margin: 0;
     padding: 0;
@@ -6,5 +11,8 @@
 
 body {
     font: 16px "Helvetica Neue", Arial, sans-serif;
-    color: #121214;
+    color: $preto;
+    background-color: $cinza;
 }
+
+

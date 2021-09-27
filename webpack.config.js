@@ -7,13 +7,13 @@ const isDevelopment = process.env.NODE_ENV !== 'production'; //Variaveis de ambi
 module.exports ={
     mode: isDevelopment ? 'development' : 'production', //ambiente de dev e produção
     devtool: isDevelopment ? 'eval-source-map' : 'source-map', //Source maps
-    entry: path.resolve(__dirname, 'src', 'index.jsx'), //Colocará a barra(/) correta de acordo com o sistema operacional
+    entry: path.resolve(__dirname, 'src', 'index.tsx'), //Colocará a barra(/) correta de acordo com o sistema operacional
     output:{ //Qual arquivo vamos gerar com o webpack
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     resolve: { //Para que possa ler arquivo js e jsx
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     devServer: {
         static: path.resolve(__dirname, 'public'),
@@ -28,7 +28,7 @@ module.exports ={
     module: { //Configuração de como a aplicação irá se comportar quando estiver importando cada um dos tipos de arquivo
         rules: [ //array de regras 
             {
-                test: /\.jsx$/,
+                test: /\.(j|t)sx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',

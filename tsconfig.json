@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],  //Entende que vamos lidar com o DOM, DOM ITERABLE ESNEXT
+    "jsx": "react-jsx",                        //Estamos utilizando o JSX, html dentro do JS sem o typescript reclamar          
+    "moduleResolution": "node",
+    "resolveJsonModule": true,                  //Add a possibilidade de importar arquivos json
+    "isolatedModules": true,                       
+    "allowJs": true,                            //Vamos ter arquivo tanto em JS quanto em TYPESCRIPT         
+    "noEmit": true,                                   
+    "allowSyntheticDefaultImports": true,            
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            
+    "strict": true,                              //Modo strict do JS, que lida com erros dentro do js       
+    "skipLibCheck": true                                 
+  },
+  "include": ["src"]                             //Todo o codigo da aplicação está dentro do src
+}

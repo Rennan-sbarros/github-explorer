@@ -1,31 +1,59 @@
-    section.repository-list{
-        margin: 40px;
+@import "global";
 
-        h1{
-            margin-bottom: 16px;
-        }
+section.repository-list{
 
-        ul{
-            list-style: none;
+    margin: 40px;
+
+    h1{
+        margin-bottom: 16px;
+        margin-left: 8px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 34px;
+    }
+
+    ul{
+        list-style: none;
+        display: inline-flex;
+        flex-wrap: wrap;
+
+        li{
+            background-color: rgba(112, 106, 106, 0.2);
+            margin: 10px;
+            padding: 20px;
+            font-size: 25px;
+            width: 1230px;
+            border-radius: 20px;
+            border: 0.5px solid #8257e6;
+            color: $preto;
             
-            li{
-                & + li {  //Toda li que antes dela tem uma li também, ela var ter um margin top
-                    margin-top: 20px;
-                }
+            /*& + li {  //Toda li que antes dela tem uma li também, ela var ter um margin top
+                margin-top: 20px;
+            }*/
 
-                p {
-                   font-size: 14px;
-                   color: #444;
-                   margin-top: 8px; 
-                }
+            p {
+                font-size: 17px;
+                color: #8257e6;
+                font-weight: bold;
+                margin-top: 15px; 
+            }
 
-                a {
-                    display: inline-block;
-                    margin-top: 16px;
-                    text-decoration: none;
-                    color: #8257e6;
-                }
+            button, button::after {
+                width: 400px;
+                height: 50px;
+                font-size: 34px;
+                text-decoration: none;
+                background: linear-gradient(45deg, transparent 5%, #8257e68c 30%);
+                border: 0;
+                color: #fff;
+                letter-spacing: 3px;
+                box-shadow: 6px 0px 0px #443074;
+                margin-top: 20px; 
+            }
+
+            a{
+                text-decoration: none;
             }
         }
-        
     }
+}
